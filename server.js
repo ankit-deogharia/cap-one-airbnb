@@ -7,6 +7,6 @@ function handleError(res, reason, message, code) {
   res.status(code || 500).json({"error": message});
 }
 
-app.get("/", function(req, res) {
-	res.send('Hello world!')
+app.post("/here", function(req, res) {
+	res.status(200).json({message: 'Hello World!'});
 });
