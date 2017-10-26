@@ -7,6 +7,11 @@ function handleError(res, reason, message, code) {
   res.status(code || 500).json({"error": message});
 }
 
-app.post("/here", function(req, res) {
-	res.status(200).json({message: 'Hello World!'});
+var server = app.listen(process.env.PORT || 8080, function () {
+    var port = server.address().port;
+    console.log("App now running on port", port);
+});
+
+app.post("/", function(req, res) {
+	res.send("Hello World")
 });
