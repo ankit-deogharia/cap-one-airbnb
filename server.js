@@ -12,6 +12,6 @@ var server = app.listen(process.env.PORT || 8080, function () {
     console.log("App now running on port", port);
 });
 
-app.post("/", function(req, res) {
-	res.send("Hello World")
+app.get("/", function(req, res) {
+	res.send("Hello World");
 });
