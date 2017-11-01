@@ -1,11 +1,15 @@
 <div class="container-fluid">
-  <nav class="navbar navbar-inverse">
-    <a class="navbar-brand" href="#">Home</a>
-    <ul class="nav navbar-nav">
-      <li><a routerLink="/vis" routerLinkActive="active">Visualizations</a></li>
-      <li><a routerLink="/insights" routerLinkActive="active">Insights</a></li>
-      <li><a routerLink="/story" routerLinkActive="active">Story</a></li>
-    </ul>
-    <router-outlet></router-outlet>
-  </nav>
+  <div class="row">
+  	<nav class="navbar navbar-inverse">
+	    <a class="navbar-brand" href="#">Home</a>
+	    <ul class="nav navbar-nav mr-auto">
+	      <li class="nav-item"><a routerLink="/vis" routerLinkActive="active">Visualizations</a></li>
+	      <li class="nav-item"><a routerLink="/insights" routerLinkActive="active">Insights</a></li>
+	      <li class="nav-item"><a routerLink="/story" routerLinkActive="active">Story</a></li>
+	    </ul>
+	</nav>
+  </div>
+  <div class="row">
+  	<router-outlet></router-outlet>
+  </div>
 </div>

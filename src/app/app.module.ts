@@ -18,11 +18,15 @@ const appRoutes: Routes = [
     AppComponent,
     VisComponent,
     InsightsComponent,
-    GraphComponent
+    GraphComponent,
   ],
   imports: [
     BrowserModule,
-    Ng2BootstrapModule.forRoot()
+    Ng2BootstrapModule.forRoot(),
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
