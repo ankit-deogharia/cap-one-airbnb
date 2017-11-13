@@ -51,7 +51,7 @@ export class InsightsComponent implements OnInit {
   		.append("neighbors", this.latLongForm.value.neighborsField)
   	this.res = this.latLongForm.value;
   	this.spinnerService.show();
-  	this.http.get<Listing[]>('http://localhost:8080/getInsights', { params: params }).subscribe((data) => {
+  	this.http.get<Listing[]>('http://localhost:5000/getInsights', { params: params }).subscribe((data) => {
   		this.idealPrice = data.map(listing => listing.price)
   			.reduce((x,y) => x+y)
   			/ this.latLongForm.value.neighborsField;
