@@ -16,6 +16,8 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'vis', component: VisComponent },
   { path: 'insights',      component: InsightsComponent },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
+
 ];
 
 @NgModule({
@@ -24,6 +26,7 @@ const appRoutes: Routes = [
     VisComponent,
     InsightsComponent,
     GraphComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
