@@ -1,8 +1,9 @@
 <app-spinner></app-spinner>
 <div class="card">
 	<div class="card-block">
-		<h2 class="card-title">Price Estimation</h2>
-		<p class="card-text">Please enter data here:</p>
+		<h2 class="card-title">Analytics</h2>
+		<h4 class="card-subtitle">Welcome to the analytics section! Please enter your data below to obtain insights.</h4>
+		<p class="card-text">Enter data here:</p>
 		<form [formGroup]="latLongForm" novalidate>
 			<div class="form-group">
 				<label class="center-block"><strong>Latitude</strong>: 
@@ -19,6 +20,7 @@
 		</form>
 		<p class="card-text">The calculated price for optimal bookings is: ${{ idealPrice | number:'1.2-2' }}</p>
 		<p class="card-text">As a result, average income that can be made from this home: ${{ idealPrice * 7 | number:'1.2-2' }}</p>
-		
+		<p class="card-text">These insights are obtained by taking the average prices of the N amount of closest neighbors to the selected point.  If in doubt, <strong>I recommend using 10 neighbors</strong> to start off with.</p>
+		<p class="card-text">The neighborhood that averaged the most positive reviews was called 'Potrero Hill'.  I figured this out by using a sentiment analysis package in a NodeJS script.  For more details check out the file labeled SentimentAnalyzer.js in the codebase.</p>
 	</div>
 </div>

@@ -7,11 +7,13 @@ import { Ng2BootstrapModule } from 'ng-bootstrap';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home-component/home-component.component';
 import { VisComponent } from './vis/vis.component';
 import { InsightsComponent } from './insights/insights.component';
 import { GraphComponent } from './vis/graph/graph.component';
 
 const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent },
   { path: 'vis', component: VisComponent },
   { path: 'insights',      component: InsightsComponent },
 ];
