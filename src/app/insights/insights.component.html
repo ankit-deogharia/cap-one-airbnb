@@ -1,3 +1,24 @@
-<p>
-  insights works!
-</p>
+<app-spinner></app-spinner>
+<div class="card">
+	<div class="card-block">
+		<h2 class="card-title">Price Estimation</h2>
+		<p class="card-text">Please enter data here:</p>
+		<form [formGroup]="latLongForm" novalidate>
+			<div class="form-group">
+				<label class="center-block"><strong>Latitude</strong>: 
+					<input class="form-control" formControlName="latField">
+				</label>
+				<label class="center-block"><strong>Longitude</strong>: 
+					<input class="form-control" formControlName="longField">
+				</label>
+				<label class="center-block"><strong>Neighbors</strong>: 
+					<input class="form-control" formControlName="neighborsField">
+				</label>
+			</div>
+			<button class="btn btn-primary" (click)="getPrices()">Get Prices</button>
+		</form>
+		<p class="card-text">The calculated price for optimal bookings is: ${{ idealPrice | number:'1.2-2' }}</p>
+		<p class="card-text">As a result, average income that can be made from this home: ${{ idealPrice * 7 | number:'1.2-2' }}</p>
+		
+	</div>
+</div>
